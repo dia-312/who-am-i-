@@ -11,9 +11,7 @@ const allQuestions = [
   { q: ["إذا مسكتني بضيّعك", "إذا تركتني بخوّفك", "بقرّبك وببعدك بنفس الوقت"], a: "الخوف" }
 ];
 
-// اختيار 5 أسئلة عشوائية
 let questions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 5);
-
 let index = 0;
 let revealed = 0;
 
@@ -48,7 +46,7 @@ function checkAnswer() {
 
   if (user === answer) {
     msg.textContent = "✅ صح!";
-    msg.style.color = "lime";
+    msg.style.color = "green";
 
     setTimeout(() => {
       index++;
@@ -69,13 +67,5 @@ function checkAnswer() {
     }
   }
 }
-
-/* 🌙 / ☀️ تبديل الثيم */
-const toggleBtn = document.getElementById("themeToggle");
-toggleBtn.onclick = () => {
-  document.body.classList.toggle("light");
-  toggleBtn.textContent =
-    document.body.classList.contains("light") ? "☀️" : "🌙";
-};
 
 loadQuestion();

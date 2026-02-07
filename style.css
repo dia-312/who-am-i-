@@ -28,7 +28,6 @@ body {
   border-radius: 12px;
   width: 380px;
   text-align: center;
-  position: relative;
 }
 
 #question {
@@ -64,14 +63,4 @@ button {
 #message {
   margin-top: 10px;
   font-weight: bold;
-}
-
-.theme-btn {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
 }
