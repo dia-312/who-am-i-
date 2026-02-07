@@ -59,9 +59,8 @@ function checkAnswer() {
           "<h2>🎉 خلصت اللعبة!</h2><p>أحسنت 👏</p>";
       }
     }, 1000);
-
   } else {
-    msg.textContent = "❌ غلط… تلميح جديد!";
+    msg.textContent = "❌ غلط… انكشف حرف!";
     msg.style.color = "orange";
 
     if (revealed < answer.length) {
@@ -70,5 +69,13 @@ function checkAnswer() {
     }
   }
 }
+
+/* 🌙 / ☀️ تبديل الثيم */
+const toggleBtn = document.getElementById("themeToggle");
+toggleBtn.onclick = () => {
+  document.body.classList.toggle("light");
+  toggleBtn.textContent =
+    document.body.classList.contains("light") ? "☀️" : "🌙";
+};
 
 loadQuestion();
